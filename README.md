@@ -12,10 +12,10 @@
         - Tipode se Desenvolvimento
             - Nativo: 
         - Android 
-               - IDE: Android Studio;
-               - Compilador: Android SDK
-               - Linguagens: Kotlin / Java
-               - Plataformas: Win/Mac/Linux
+            - IDE: Android Studio;
+            - Compilador: Android SDK
+            - Linguagens: Kotlin / Java
+            - Plataformas: Win/Mac/Linux
         - Ios: 
             - IDE: XCode
             - Compilador: Cocoa Touch(SDK) (software development kit)
