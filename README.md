@@ -35,3 +35,12 @@
         - linguagem: JavaScript
         - Não gera APK nativos
         (RunTime)
+
+18/03/2025
+Identação: espaçamento usado em python, se for removido pode causar erro
+
+Main.dart = arquivo principal da aplicação
+
+extends = herança
+
+verboso = repetitivo nas palavras
