@@ -44,3 +44,13 @@ Main.dart = arquivo principal da aplicação
 extends = herança
 
 verboso = repetitivo nas palavras
+
+25/03/2025
+1° coisa a se fazer no mobile: flutter doctor, comum dar dois erros. o Android toolchain tem que dar certo.
+2° abrir o bluestacks e limpar o cache de usuário.
+
+scaffold = suporte da janela
+
+evenly = todo o espaçamento
+between = 
+around =
