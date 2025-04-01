@@ -50,7 +50,11 @@ verboso = repetitivo nas palavras
 2° abrir o bluestacks e limpar o cache de usuário.
 
 scaffold = suporte da janela
+dentro: appBar, Body, Bottom etc
 
 evenly = todo o espaçamento
 between = 
 around =
+
+01/04/2025
+padding: espaçamento interno
