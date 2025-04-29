@@ -36,6 +36,7 @@
         - Não gera APK nativos
         (RunTime)
 
+==============================================================================================
 18/03/2025
 Identação: espaçamento usado em python, se for removido pode causar erro
 
@@ -45,6 +46,7 @@ extends = herança
 
 verboso = repetitivo nas palavras
 
+==============================================================================================
 25/03/2025
 1° coisa a se fazer no mobile: flutter doctor, comum dar dois erros. o Android toolchain tem que dar certo.
 2° abrir o bluestacks e limpar o cache de usuário.
@@ -56,7 +58,15 @@ evenly = todo o espaçamento
 between = 
 around =
 
+=============================================================================================
 01/04/2025
 padding: espaçamento interno
 
-15/04/2025
+=============================================================================================
+29/04/2025
+persistencia de dados: armazenar informações
+tipos: armazenamento externo
+nuvem, drive, APIS
+
+memeoria interna: banco de dados, cache
+memoria externa: memoria de fotos, audios etc 
