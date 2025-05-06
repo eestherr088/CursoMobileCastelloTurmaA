@@ -63,7 +63,7 @@ class _TelaInicialState extends State<TelaInicial> {
     setState(() {
       //atualiza a tela
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text("Modo Escuro ${_darkMode ? "Ativado" : "Desativado"}")));
+        SnackBar(content: Text("Modo Escuro ${_darkMode ? "Ativado" : "Desativado"}")));  // operador ternário
     });
   }
 
@@ -93,8 +93,12 @@ class _TelaInicialState extends State<TelaInicial> {
               ),
               ElevatedButton(
                 onPressed: _salvarNome,
-                child: Text("Salvar Nome do Usuário"),
-              ),
+                child: Text("Salvar Nome do Usuário"),),
+                SizedBox(height: 20,),
+                ElevatedButton(
+                  onPressed: () => Navigator.pushNamed(context, "/tarefas"),  // navegador para a tela de tarefas
+                  child: Text("Tarefas do $_nome"),
+                )
             ],
           ),
         ),
@@ -105,6 +109,8 @@ class _TelaInicialState extends State<TelaInicial> {
 
 // o que é o sharedPreferences?
 // é uma biblioteca de armazenamento de dados internos do aplicativo (cache do aplicativo)
+// projeto usando shared preferences
+// memoria interna - que armazena dados simples {"chave" : valor}
 
 // como funciona?
 // armazena dados na condição de chave-valor (key-value)
@@ -116,3 +122,5 @@ class _TelaInicialState extends State<TelaInicial> {
 // métodos dos sharedPreferences: 
 // getters and setters
 // get: puxar  set: alterar/criar
+
+// instalação da biblioteca, abrir no terminal o prejeto "flutter pub add sharedpreferences"

@@ -70,3 +70,9 @@ nuvem, drive, APIS
 
 memeoria interna: banco de dados, cache
 memoria externa: memoria de fotos, audios etc 
+
+=============================================================================================
+06/05/2025
+ widget: elemento de interação com o usuário
+ scaffold: widget que monta interação da tela
+ widget de estrutura: collumn, container
