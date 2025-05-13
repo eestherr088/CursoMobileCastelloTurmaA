@@ -76,3 +76,6 @@ memoria externa: memoria de fotos, audios etc
  widget: elemento de interação com o usuário
  scaffold: widget que monta interação da tela
  widget de estrutura: collumn, container
+
+=============================================================================================
+13.05.2025
