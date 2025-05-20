@@ -1,13 +1,12 @@
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-void mian() {  // onde roda minha aplicação
-  runApp(MaterialApp(  // widget principal (elementos visuais) - raiz do meu aplicaivo
-    // home page
-    home: PerfilPage(),
-    // configurações de rota
-    // route:{},  // mais de uma página
-    //cofiguração de tema
+void main(){ //onde roda minha aplicação
+  runApp(MaterialApp( //Widget Principal (Elementos Visuais) - raiz do meu aplicativo 
+      //home:
+      home: PerfilPage(),
+      //configurações de rota
+      //route:{}, // mais de uma página
+      //configuração de theme
   ));
 }
 
@@ -15,17 +14,17 @@ void mian() {  // onde roda minha aplicação
 
 class PerfilPage extends StatefulWidget{
   @override
-  State<PerfilPage> createState() => _PerfilPageState();  // chama as modificações das telas
+  State<PerfilPage> createState()=> _PefilPageState(); //chama as modificações da tela
 }
 
-class _PerfilPageState extends State<PerfilPage>{
-  // atributos
-  final TextEditingController _nomeController = TextEditingController();
-  final TextEditingController _idadeController = TextEditingController();
-  String? _corSelecionada;  // no momento nao selecionou a cor
-  Color _corFundo = Color.white;
+class _PefilPageState extends State<PerfilPage>{
+  //atributos
+  TextEditingController _nomeController = TextEditingController();
+  TextEditingController _idadeController = TextEditingController();
+  String? _corSelecionada;
+  Color _corFundo = Colors.white;
 
-  String? _nomeSalvo;
+  String? _nomeSalvo; //null
   String? _idadeSalva;
   String? _corSalva;
 
@@ -34,7 +33,7 @@ class _PerfilPageState extends State<PerfilPage>{
     "Verde": Colors.green,
     "Vermelho": Colors.red,
     "Amarelo": Colors.yellow,
-    "Cinza": Colors.grey
+    "Cinza": Colors.grey,
   };
 
   @override
@@ -45,18 +44,20 @@ class _PerfilPageState extends State<PerfilPage>{
   }
 
   _carregarDados() async { //conectar com Shared Preferences
-    SharedPreferences prefs = await SharedPreferences.getInstance();  // criei a conexão com shared preferences (já pega as informções salvas)
-    setState(() {  // mudança de estado ()
-    _nomeSalvo = prefs.getString("nome");  // pega o nome salvo no shared_preferences
-    _idadeSalva = prefs.getString("idade");
-    _corSalva = prefs.getString("cor");
-    if(_corSalva != null && coresDisponiveis.containsKey(_corSalva!)){
-      _corFundo = coresDisponiveis[_corSalva!]!;
+    SharedPreferences prefs = await SharedPreferences.getInstance(); // criei a conexão com shared preferences ( já pega as informações salvas)
+    setState(() { // mudança de estado ()
+      _nomeSalvo = prefs.getString("nome"); //pego o nome salvo no shared_preferences
+      _idadeSalva = prefs.getString("idade");
+      _corSalva = prefs.getString("cor");
+      if(_corSalva != null && coresDisponiveis.containsKey(_corSalva!)){
+        _corFundo = coresDisponiveis[_corSalva!]!; //permitir nulo
+        _corSelecionada = _corSalva;
       }
     });
   }
-  _salvarDados() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();  // conecta com o cache
+
+  _salvarDados() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance(); //conecta com o cache
     await prefs.setString("nome", _nomeController.text.trim());
     await prefs.setString("idade", _idadeController.text.trim());
     await prefs.setString("cor", _corSelecionada ?? "Azul");
@@ -65,7 +66,7 @@ class _PerfilPageState extends State<PerfilPage>{
       _nomeSalvo = _nomeController.text.trim();
       _idadeSalva = _idadeController.text.trim();
       _corSalva = _corSelecionada ?? "Azul";
-      _corFundo = _coresDisponiveis[_corSalva!]!;  // permitir nulo
+      _corFundo = coresDisponiveis[_corSalva!]!; //permitir nulo
     });
   }
 
@@ -105,7 +106,10 @@ class _PerfilPageState extends State<PerfilPage>{
                   _corSelecionada = valor;
                 });
               }),
-              SizedBox(height: 16,),
+            SizedBox(height: 16,),
+            ElevatedButton(
+              onPressed: _salvarDados, child: Text("Salvar Dados")),
+            SizedBox(height: 16,),
             Divider(),
             Text("Dados Salvos: "),
             if (_nomeSalvo != null)
