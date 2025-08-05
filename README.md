@@ -80,4 +80,13 @@ memoria externa: memoria de fotos, audios etc
 =============================================================================================
 13.05.2025
 =============================================================================================
-27.05.2025
+05.08.2025
+## Preparação da Máquina para Flutter
+- Instalar o Java
+    - Terminal: Java --version -> jdk-21java
+- Preparar o Ambiente de Android ( platforms - emulator - commandLine)
+    - Terminal: sdkmanager --list, adb --version, emulator --version
+- Preparar o Flutter ( src/flutter ) 3.32.8
+    -terminal: flutter --version
+
+==========================================================================
