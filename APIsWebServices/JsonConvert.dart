@@ -14,5 +14,13 @@ void main(){
    Map<String,dynamic> usuario = json.decode(jsonString);
 
    print(usuario["nome"]);  // Pedro
-   print(usuario["login"]);
+   print(usuario["login"]);  // UserPedro
+
+   // Modificar a senha para 6 digitos / Salvar no JsonString
+
+    usuario["password"] = "123456";
+    // gravar no Json
+
+   jsonString = json.encode(usuario);
+   print(jsonString);
 }

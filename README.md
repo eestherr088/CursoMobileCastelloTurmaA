@@ -90,3 +90,9 @@ memoria externa: memoria de fotos, audios etc
     -terminal: flutter --version
 
 ==========================================================================
+13.08.2025
+json é um arquivo de dados, escrito na linguagem javascript, ele usa uma forma de coleçao (para cada chave ou valor) 
+
+_ = privado
+
+texto em formato json (uma coleção)
