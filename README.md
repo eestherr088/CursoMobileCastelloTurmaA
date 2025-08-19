@@ -96,3 +96,10 @@ json é um arquivo de dados, escrito na linguagem javascript, ele usa uma forma 
 _ = privado
 
 texto em formato json (uma coleção)
+
+============================================================================
+18.08.2025
+ json server = biblioteca do node que cria api's, funciona como um banco de dados
+
+ put: atualiza integral
+ path: atualiza em partes
